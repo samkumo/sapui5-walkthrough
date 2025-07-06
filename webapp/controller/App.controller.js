@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast"
-], (Controller, MessageToast) => {
+    "sap/m/MessageToast",
+    "sap/ui/core/Popup"
+], (Controller, MessageToast, Popup) => {
     "use strict";
 
     //This returns Controller-object which we have extended with new functions
@@ -16,7 +17,12 @@ sap.ui.define([
             const sRecipient = this.getView().getModel().getProperty("/recipient/name"); //s = string
             const sMsg = oBundle.getText("helloMsg", [sRecipient]);
 
-            MessageToast.show(sMsg)
+            //Toast message positions must be set to avoid error message
+            const oDock = Popup.Dock.CenterCenter;
+            MessageToast.show(sMsg, {
+                at: oDock,
+                my: oDock
+            });
         }
     }
     );
