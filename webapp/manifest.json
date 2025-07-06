@@ -1,6 +1,18 @@
 {
   "_version": "1.65.0",
   "sap.app": {
-    "id": "ui5.walkthrough"
+    "id": "ui5.walkthrough",
+    "title": "SAPUI5 Walkthrough",
+    "applicationVersion": { "version": "0.1" },
+    "type": "application"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {},
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
   }
 }
