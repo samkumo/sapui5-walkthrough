@@ -9,5 +9,5 @@ sap.ui.define([
             id: "walkthrough"
         },
         async: true
-    }).placeat("content");
+    }).placeAt("content");
 });

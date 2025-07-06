@@ -1,9 +1,7 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast",
-    "sap/ui/model/json/JSONModel",
-    "sap/ui/model/resource/ResourceModel"
-], (Controller, MessageToast, JSONModel, ResourceModel) => {
+    "sap/m/MessageToast"
+], (Controller, MessageToast) => {
     "use strict";
 
     //This returns Controller-object which we have extended with new functions
