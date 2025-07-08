@@ -23,6 +23,15 @@ sap.ui.define([
                 at: oDock,
                 my: oDock
             });
+        },
+
+        //Open dialog asynchronously
+        async onOpenDialog() {
+            //first load the dialog fragment
+            this.oDialog ??= await this.loadFragment({
+                name: "ui5.walkthrough.view.HelloDialog"
+            });
+            this.oDialog.open(); //then open it
         }
     }
     );
