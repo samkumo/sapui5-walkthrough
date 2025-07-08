@@ -32,6 +32,11 @@ sap.ui.define([
                 name: "ui5.walkthrough.view.HelloDialog"
             });
             this.oDialog.open(); //then open it
+        },
+
+        //Close the dialog
+        onCloseDialog() {
+            this.byId("helloDialog").close();
         }
     }
     );
