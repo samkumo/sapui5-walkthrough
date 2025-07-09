@@ -7,9 +7,8 @@ sap.ui.define([
 
     //This returns Controller-object which we have extended with new functions
     return Controller.extend("ui5.walkthrough.controller.HelloPanel", {
-        //Here we define the functions and implement the functions
-        //Different from ABAP where definition and implementation
-        //are clearly separated.
+        //Here we define and implement new functions
+        //Different from ABAP where definition and implementation are clearly separated
 
         onShowHello() {
             //Read message text from i18n model
