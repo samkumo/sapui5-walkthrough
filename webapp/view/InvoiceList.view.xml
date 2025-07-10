@@ -22,6 +22,7 @@
                     formatOptions: { showMeasure: false }
                 }"
                 numberUnit="{view>/currency}"
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : (${invoice>ExtendedPrice} > 30 ? 'Warning' : 'Success') }"
             />
         </items>
     </List>
