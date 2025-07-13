@@ -25,6 +25,9 @@ sap.ui.define([
             const oModel = new JSONModel(oData);
             //Set the model for current view
             this.setModel(oModel);
+
+            //Router loads the views we've configured in manifest routes and targets
+            this.getRouter().initialize();
         }
     })
 })

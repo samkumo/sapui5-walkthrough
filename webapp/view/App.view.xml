@@ -5,19 +5,9 @@
     displayBlock="true"
 >
     <Shell>
-        <App class="myAppStyle">
-            <pages>
-                <Page title="{i18n>homePageTitle}">
-                    <content>
-                        <mvc:XMLView
-                            viewName="ui5.walkthrough.view.HelloPanel"
-                        />
-                        <mvc:XMLView
-                            viewName="ui5.walkthrough.view.InvoiceList"
-                        />
-                    </content>
-                </Page>
-            </pages>
-        </App>
+        <App
+            class="myAppStyle"
+            id="app"
+        />
     </Shell>
 </mvc:View>
