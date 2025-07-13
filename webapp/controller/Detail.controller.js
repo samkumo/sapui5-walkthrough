@@ -11,10 +11,12 @@ sap.ui.define([
         },
 
         onObjectMatched(oEvent) {
+            const sInvoicePath = window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath);
+            //console.log("InvoicePath IN:", sInvoicePath);
             this.getView().bindElement({
-                path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
+                path: "/" + sInvoicePath,
                 model: "invoice"
-            })
+            });
         },
         onNavBack() {
             const oHistory = History.getInstance();
@@ -23,10 +25,9 @@ sap.ui.define([
             if (sPreviousHash !== undefined) {
                 window.history.go(-1);
             } else {
-                //Fallback when previous history is not found
                 const oRouter = this.getOwnerComponent().getRouter();
                 oRouter.navTo("overview", {}, true);
             }
         }
-    })
-})
+    });
+});
