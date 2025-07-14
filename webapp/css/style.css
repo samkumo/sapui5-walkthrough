@@ -8,3 +8,11 @@ html[dir='rtl'] .myAppStyle .myButtonStyle.sapMBtn {
   display: inline-block;
   font-weight: bold;
 }
+
+/*  ProductRating */
+.myAppProductRating {
+  padding: 0.75rem;
+}
+.myAppProductRating .sapMRI {
+  vertical-align: initial;
+}
