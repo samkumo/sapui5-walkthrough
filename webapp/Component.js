@@ -2,8 +2,8 @@ sap.ui.define([
     // https://ui5.sap.com/#/api/
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/model/resource/ResourceModel"
-], (UIComponent, JSONModel, ResourceModel) => {
+    "sap/ui/Device"
+], (UIComponent, JSONModel, Device) => {
     "use strict";
 
     return UIComponent.extend("ui5.walkthrough.Component", {
@@ -25,6 +25,11 @@ sap.ui.define([
             const oModel = new JSONModel(oData);
             //Set the model for current view
             this.setModel(oModel);
+
+            //Set device model
+            const oDeviceModel = new JSONModel(Device);
+            oDeviceModel.setDefaultBindingMode("OneWay"); //read-only
+            this.setModel(oDeviceModel, "device");
 
             //Router loads the views we've configured in manifest routes and targets
             this.getRouter().initialize();
