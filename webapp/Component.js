@@ -33,6 +33,11 @@ sap.ui.define([
 
             //Router loads the views we've configured in manifest routes and targets
             this.getRouter().initialize();
+        },
+
+        getContentDensityClass() {
+            //If device supports touch, returns a cozy-version which is better for touch input
+            return Device.support.touch ? "sapUiSizeCozy" : "sapUiSizeCompact";
         }
     })
 })
